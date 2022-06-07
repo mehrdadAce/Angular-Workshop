@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
+import { Book } from '../../../../types';
 
 @Component({
   selector: 'app-book-card',
@@ -10,6 +11,7 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 })
 export class CardComponent implements OnInit {
 
+  @Input() book?: Book;
   constructor() { }
 
   ngOnInit() {
