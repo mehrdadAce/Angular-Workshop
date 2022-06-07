@@ -1,0 +1,4 @@
+<div class="cursor-pointer">
+  <app-book-card *ngIf="book" [book]="book" (click)="onClick(book)"></app-book-card>
+  <app-movie-card *ngIf="movie" [movie]="movie" (click)="onClick(movie)"></app-movie-card>
+</div>

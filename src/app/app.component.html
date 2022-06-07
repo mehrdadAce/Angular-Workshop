@@ -1,9 +1,15 @@
-<p>
-  Start editing to see some magic happen :)
-</p>
+<h3>Angular Workshop 07/06/2022 :)</h3>
 
 <!-- <app-book-card *ngFor="let item of items" [book]="item"></app-book-card> -->
-<app-shared-card *ngFor="let item of items" [item]="item"></app-shared-card>
+<!-- <app-shared-card *ngFor="let item of items" [item]="item"></app-shared-card> -->
 
 <!-- <app-book-card *ngIf="book" [book]="book"></app-book-card>
 <app-movie-card *ngIf="movie" [movie]="movie"></app-movie-card> -->
+
+<div class="container">
+  <div class="card-container" *ngFor="let item of items">
+    <app-shared-card [item]="item" (select)="select($event)"></app-shared-card>
+  </div>
+</div>
+
+<div class="selected" *ngIf="selected">You selected:</div>

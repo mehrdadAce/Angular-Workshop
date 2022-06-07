@@ -1,8 +1,10 @@
 import {
   ChangeDetectionStrategy,
   Component,
+  EventEmitter,
   Input,
   OnInit,
+  Output,
 } from '@angular/core';
 import { Book, Movie } from '../../../../types';
 
@@ -15,6 +17,11 @@ import { Book, Movie } from '../../../../types';
 export class CardComponent {
   book?: Book;
   movie?: Movie;
+  @Output() select = new EventEmitter<Movie | Book>();
+
+  onClick(item: Book | Movie): void {
+    this.select.emit(item);
+  }
 
   @Input()
   set item(value: Movie | Book | undefined) {
