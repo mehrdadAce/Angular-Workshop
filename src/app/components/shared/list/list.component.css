@@ -1,0 +1,25 @@
+.container {
+  background-color: rgba(0, 0, 0, 0.12);
+  margin-top: -16px;
+  padding-top: 16px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  .card-container {
+    margin: 16px;
+  }
+}
+
+h3 {
+  color: green;
+}
+
+.selected {
+  flex-basis: 100%;
+  flex-direction: column;
+  padding: 8px;
+  margin: 16px;
+  background-color: white;
+  font-size: large;
+}
