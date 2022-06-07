@@ -4,8 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 
+import { MatCardModule } from '@angular/material/card';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
+  imports: [ 
+    BrowserModule, 
+    FormsModule,
+    //AppRoutingModule,
+    MatCardModule,
+    BrowserAnimationsModule 
+  ],
   declarations: [ AppComponent ],
   bootstrap:    [ AppComponent ]
 })
